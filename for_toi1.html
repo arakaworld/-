@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>for文のサンプル</title>
+
+	<body>
+		
+	
+	<noscript>JavaScriptを有効にして下さい</noscript>
+
+	<script><!--
+		document.write("<h2>３の倍数</h2>");
+
+		var kosuu = 0;
+
+		for(var i = 1; i <= 100; i++) {
+			if(i % 3 == 0) {
+				kosuu++;
+				document.write(i);	
+			}
+		}
+
+		document.write("<h1>" + kosuu + "個</h1>");
+
+document.write("<HR>");
+
+		document.write("<h2>奇数と偶数の個数</h2>");
+
+		var kisuu = 0;
+		var gusuu = 0;
+
+		for(var i = 1; i <= 100; i++) {
+			if(i % 2 == 0) {
+				gusuu++;
+			}else {
+				kisuu++;
+			}
+		}
+
+		document.write("<h1>" + kisuu + "個</h1>");
+		document.write("<h1>" + gusuu + "個</h1>");
+
+document.write("<HR>");
+
+		document.write("<h2>if文を使わない３の倍数</h2>");
+
+		var k = 0;
+
+		for(var i = 3; i <= 100; i += 3) {
+				k++;
+				document.write(i);
+				
+			}
+
+		document.write("<h1>" + k + "個</h1>");
+
+document.write("<HR>");
+
+		document.write("<h2>if文を使わない奇数と偶数の個数</h2>");
+
+		var ki = 100;
+		var gu = 0;
+
+		for(var j = 2; j <= 100; j+=2) {
+			gu++;
+		}
+
+		document.write("<h1>奇数は" + (ki - gu) + "個</h1>");
+		document.write("<h1>偶数は" + gu + "個</h1>");
+
+document.write("<HR>");
+
+		var x = 0;
+		for (var a = 1; a <= 10; a++) {
+
+			for (var b = 1; b <= 10; b++) {
+
+				if(a == b || (a==1 && b==10)) {
+					document.write("＊");
+				
+				}else {
+					document.write("・");
+					
+				}
+
+				if(b == 10) {
+					document.write("<br/>");
+				}
+			}
+		}
+	--></script>
+
+
+	</body>
+</html>

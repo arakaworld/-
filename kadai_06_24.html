@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>課題</title>
+</head>
+<body>
+
+	<form name="js">
+		<input type="text" name="txtb" value="">円<br>
+		<input type="button" value="消費税計算" onclick="tbox1()"><br>
+	</form>
+
+	<script><!--
+	function tbox1(){
+
+		var j = document.js.txtb.value;
+		var result = Math.floor(j * 1.08) ;
+		var zei = "<h1>税抜き"+ j + "円の税込み価格は、" + result + "円</h1>";
+
+		target = document.getElementById("kekka");
+		target.innerHTML = zei;
+	}
+	--></script>
+	<div id = "kekka"></div>
+<HR>
+
+	<form name="js2">
+		<input type="text" name="height" value="">ｍ<br>
+		<input type="text" name="weight" value="">ｋｇ<br>
+		<input type="button" value="BMI計算" onclick="tbox2();"/><br>
+	</form>
+
+	<script><!--
+	function tbox2(){
+		var h = document.js2.height.value;
+		var w = document.js2.weight.value;
+
+		var result = w / (h * h);
+		var result2 = result.toFixed(1);
+		var index;
+
+		if (result2 >= 40) { 
+			index = "デブ（４度）";
+		}else if(result2 >= 35) {
+			index = "デブ（３度）";
+		}else if(result2 >= 30) {
+			index = "デブ（２度）";
+		}else if(result2 >= 25) {
+			index = "デブ（１度）";
+		}else if(result2 >= 18.5) {
+			index = "ふつう体重";
+		}else {
+			index = "ガリ";
+		}
+
+		var bmi = "<h1>あなたのBMI値は、約" + result2 + "。" + index + "です。</h1>";
+		
+		
+
+
+		target = document.getElementById("kekka2");
+		target.innerHTML = bmi;
+	}
+	--></script>
+	<div id = "kekka2"></div>
+<HR>
+
+	<input type="button" value= "賽は投げられた" onclick="saikoro();"/>
+	<script><!--
+		function saikoro() {
+			var myDate = new Date();
+			var me = myDate.getSeconds() % 6;
+			var dme;
+			if(me == 1) {
+				dme = "<h1>1</h1>";
+			}else if(me == 2) {
+				dme = "<h1>2</h1>";
+			}else if(me == 3) {
+				dme = "<h1>3</h1>";
+			}else if(me == 4) {
+				dme = "<h1>4</h1>";
+			}else if(me == 5) {
+				dme = "<h1>5</h1>";
+			}else {
+				dme = "<h1>6</h1>";
+			}
+		target = document.getElementById("deme");
+		target.innerHTML = dme;
+	}
+	--></script>
+<div id = "deme"></div>
+<HR>
+
+
+	<form name="js3">
+		<input type="text" name="binary" value=""><br>
+		<p>0～255までの数値を入力してください。</p>
+		<input type="button" value="２進数の計算" onclick="bin()"><br>
+	</form>
+
+	<script><!--
+		function bin() {
+			var i = document.js3.binary.value;
+			var k;
+			var array = new Array(8);
+ 			var str;
+
+			if(i > 255) {
+				str = "数値が範囲外です"
+			}else {
+				for(var m = 7; m >= 0; m--) {
+					k = i % 2;
+					array[m] = k;
+					i = Math.floor(i / 2);
+				}
+				str = array.join("");
+			}
+
+			target = document.getElementById("bibi");
+			target.innerHTML = "<h1>" + str + "</h1>";
+		}
+	--></script>
+<div id = "bibi"></div>
+<HR>
+
+	<script><!--
+		var myDate = new Date();
+		var me = myDate.getSeconds();
+		
+		document.write("現在" + me + "秒<br/><br/>");
+		if(me < 30) {
+			document.write("前半");
+		}else {
+			document.write("後半");
+		}
+
+	--></script>
+<HR>
+
+	<form name="js5">
+		<input type="text" name="kazu" value=""><br>
+		<input type="button" value="星の数と棒の長さ" onclick="gggg()"><br>
+	</form>
+
+	<script><!--
+	function gggg(){
+
+		var s = document.js5.kazu.value;
+		
+		//星の数
+		for (var i = 0; i < s; i++) {
+			document.write("☆");
+		}
+
+document.write("<HR><br/>");
+
+		//棒の長さ
+		document.write("<p><img src = l.png>");
+			for (var i = 0; i < s; i++) {
+				document.write("<img src = m.png>");
+			}
+		document.write("<img src = r.png></p>");
+	}
+	--></script>
+
+	<script><!--
+
+	--></script>
+
+<script>
+		<!--
+			var i;
+			var j;
+			var n = 300;
+
+			document.write("<p>");
+			for(i = 0; i <= n; i++) {
+				for(j = 0; j <= n-1; j++){
+					if(j <= n-1-i){
+						document.write("☆");
+					}else{
+						document.write("★");
+					}
+				}
+				document.write("<br>");
+			}
+			document.write("</p>");
+		-->
+		</script>
+</body>
+</html>

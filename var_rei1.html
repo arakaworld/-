@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='UTF-8'>
+		<title>変数を利用したページ（サンプル）</title>
+	</head>
+	<body>
+		<h1>変数を利用したサンプル</h1>
+		<p>変数に代入したデータを表示する</p>
+		<hr>
+		<noscript>
+			<h3>JavaScriptを有効にして下さい</h3>
+		</noscript>
+
+		<script><!--
+			var name = "荒川　照太";
+			var age = "29";
+			document.write("<p>変数name=" + name + "</p>");
+			document.write("<p>変数age=" + age + "</p>");
+
+			var i = 10;
+			var j = 4;
+			var array = new Array(5);
+
+			array[0] = i + "たす" + j + "は、" + (i + j);
+			array[1] = i + "ひく" + j + "は、" + (i - j);
+			array[2] = i + "かける" + j + "は、" + i * j;
+			array[3] = i + "わる" + j + "は、" + (i / j);
+			array[4] = i + "わる" + j + "の余りは、" + (i % j);
+
+			for (var a = 0; a < array.length; a++) {
+				document.write("<p>" + array[a] + "</p>");
+			}
+
+		
+
+			function OnButtonClick() {
+
+				var kazu = Math.floor(Math.random() * ( ( 10 + 1 ) +10 ) ) -10;
+				var result;
+
+				if(kazu > 0) {
+					result = "<p>変数の値「" + kazu + "」は正の値です</p>"
+				}else if(kazu < 0) {
+					result = "<p>変数の値「" + kazu + "」は負の値です</p>"
+				}else {
+					result = "<p>変数の値は０です</p>"
+				}
+
+				target = document.getElementById("output");
+				target.innerHTML = result;
+			}
+		--></script>
+
+		<input type="button" value="正or負？？" onclick="OnButtonClick();"/>
+<br />
+<br />
+		<div id="output"></div>
+<br />
+<br />
+		<input type="button" value= "What's Seconds Now？？" onclick="OnButtonClickSeconds();"/>
+
+		<script><!--
+
+			function OnButtonClickSeconds() {
+				
+				/*document.write("<h1>" + myDate + "</h1>");*/
+				
+				var myDate = new Date();
+				var nowSeconds = myDate.getSeconds();
+				var tired;
+				if(nowSeconds >= 0 && nowSeconds <= 10) {
+					tired = "<p style = color:red>疲れたー</p>"
+				}else if(nowSeconds > 10 && nowSeconds <= 20){
+					tired = "<p style = color:blue>眠ーい</p>"
+				}else if(nowSeconds > 20 && nowSeconds <= 30){
+					tired = "<p style = color:green>帰りたーい</p>"
+				}else {
+					tired = "<p style = color:#f0f0f0>死ーん…</p>"
+				}
+				target = document.getElementById("outputSeconds");
+				target.innerHTML = nowSeconds + tired;
+			}
+
+		--></script>
+		<div><h1 id="outputSeconds"></h1></div>
+<br />
+	</body>
+</html>
