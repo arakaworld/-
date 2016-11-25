@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>演習３～繰り返し文～</title>
+</head>
+	<body>
+		<h1>while文</h1>
+		<script><!--
+			var i = 1;
+			var gu = 0;
+			var ki = 0;
+			while(i <= 100) {
+				if(i % 2 == 1) {
+					ki += i;
+				}else {
+					gu += i}
+				i++;
+			}
+
+		document.write( "奇数の合計は" + ki + "<br/>" + "偶の合計は" + gu + "<br/>" );
+
+		--></script>
+
+		<h1>do-while文</h1>
+
+		<script><!--
+			var i = 0;
+			var gu = 0;
+			var ki = 0;
+		
+			do {
+				if(i % 2 == 1) {
+					ki = ki + i;
+				}else {
+					gu += i
+				}
+				i++;
+			} while(i <= 100);
+
+		document.write( "奇数の合計は" + ki + "<br/>" + "偶の合計は" + gu + "<br/>" );
+		--></script>
+
+		<script><!--
+
+			for(var i = 1; i <= 10; i++) {
+				if(i == 5) {
+					continue;
+				}
+				if(i == 7) {
+					break;
+				}
+		document.write("<h3>値＝" + i + "</h3>");
+		}
+		--></script>
+
+
+
+	</body>
+</html>

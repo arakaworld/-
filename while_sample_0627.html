@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<title>while文のサンプル</title>
+	</head>
+	<body>
+		<h1>while文のサンプル</h1>
+		<p>１～１０までの整数の合計を求める</p>
+		<HR>
+		<noscript>JavaScriptを有効にして下さい</noscript>
+		<script><!--
+			var cnt = 1;
+			var sum = 0;
+			while(cnt <= 10) {
+				sum = sum + cnt;
+				cnt++;
+			}
+			document.write("<p>１～１０までの合計 ＝ " + sum + "</p>");
+		--></script>
+
+		<script><!--
+			var cnt = 1;
+			var sum = 0;
+			while(sum <= 100) {
+				sum = sum + cnt;
+				cnt++;
+			}
+			document.write("<p>１～" + (cnt - 1) + "までの合計 ＝ " + sum + "</p>");
+		--></script>
+
+		<script><!--
+			s = i =  0;
+			do {
+				i += 1;		//ｉに１加えたものをｉに代入する
+				s = s + i;	//ｓにｓ＋ｉの結果を代入する
+			}while (i <10);		//ｉが１０より小さければ繰り返す
+
+			document.write("1から" + i + "までの和は" + s + "<br/>");
+
+		--></script>
+
+		<script><!--
+			var i = 0;
+			var j = 0;	
+			while(i <= 10) {
+				j += i;
+				i++;
+			}
+			document.write("1から" + i + "までの和は" + j + "<br/>");
+		--></script>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>switch•¶‚ÌƒTƒ“ƒvƒ‹</title>
+	</head>
+	<body>
+		<h1>switch•¶‚ÌƒTƒ“ƒvƒ‹</h1>
+		<p>•Ï”‚É“s“¹•{Œ§–¼uˆïéŒ§v‚ğ“ü—Í‚µ‚Ä‚¨‚«A“ü—Í‚³‚ê‚½“s“¹•{Œ§–¼‚É‚æ‚Á‚ÄŒ§’¡Šİ’n‚ğ•\¦‚·‚é</p>
+		<script>
+			var prefName = "ˆïéŒ§";
+			switch (prefName) {
+				case "“È–ØŒ§": city = "‰F“s‹{s";
+						break;
+				case "ˆïéŒ§": city = "…ŒËs";
+						break;
+				case "ŒQ”nŒ§": city = "‘O‹´s";
+						break;
+				default: city = "ŠY“–‚·‚és‚Í“o˜^‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB";
+						break;
+			}
+			document.write("<p>“s“¹•{Œ§–¼" + prefName + "‚ÌŒ§’¡Šİ’n‚ÍA" + city + "‚Å‚·</p>");
+		</script>
+<HR>
+		<h1>switch•¶‚ÌƒTƒ“ƒvƒ‹‚ğif•¶‚É</h1>
+		<script><!--
+			var prefName = "“È–ØŒ§";
+
+			if (prefName == "ˆïéŒ§") {
+					city = "…ŒËs"
+				} else if (prefName == "“È–ØŒ§") {
+					city = "‰F“s‹{s";
+				} else if (prefName == "ŒQ”nŒ§") {
+					city = "‘O‹´s";
+				}else {
+					city = "ŠY“–‚·‚és‚Í“o˜^‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB";
+				}
+			document.write("<p>“s“¹•{Œ§–¼" + prefName + "‚ÌŒ§’¡Šİ’n‚ÍA" + city + "‚Å‚·</p>");
+		--></script>
+<HR>
+<h1>‰‰K‚S`switch•¶`</h1>
+		<script><!--
+			var gen = "—«";
+			var fee = 1000;
+
+			switch(gen) {
+				case "’j«": break;
+
+				case "—«": fee -= (fee * 0.15);
+						break;
+			}
+			document.write("<p>" + gen + "‚Ì“üê—¿‹à‚Í" + fee + "‰~‚Å‚·</p>");	
+		--></script>
+<HR>
+		<script><!--
+			var gen = "’j«";
+			var fee = 1000;
+			var older = "”NŠñ‚è";
+
+			switch(gen) {
+				case "’j«": if(older != "”NŠñ‚è") {
+						break;}
+
+				case "—«": fee -= (fee * 0.15);
+						break;
+
+				defalut : fee -= (fee * 0.3);
+			}
+			document.write("<p>" + older + "‚Å" + gen + "‚Ì“üê—¿‹à‚Í" + fee + "‰~‚Å‚·</p>");	
+		--></script>
+<HR>
+
+		<script><!--
+			var images = ["image0.jpg","image1.jpg","image2.jpg"];
+			for (var i = 0; i < images.length; i++) {
+				document.write("<image src = '" + images[i] + "' width = '300' height = '200'>")
+			}
+			var images2 = images.slice(0,3);
+			document.write("<image src = '" + images2[2] + "' width = '300' height = '200'>")
+		--></script>
+
+
+	</body>
+</html>
