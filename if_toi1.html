@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>奇or偶and成績</title>
+	</head>
+<body>
+	<script><!--
+	var i = 15;
+
+	if(i % 2 ==0) {
+		document.write("<h1>" + i + "は偶数です。</h1>");
+	}else {
+		document.write("<h1>" + i + "は奇数です。</h1>");
+	}
+	--></script>
+
+	<form name="js">
+		<input type="text" name="txtb" value=""><br>
+		<input type="button" value="判定" onclick="tbox1()"><br>
+	</form>
+	<script><!--
+
+	function tbox1(){
+
+		var j = document.js.txtb.value;
+		var str;
+			if(j <= 59) {
+				str = "<h1>" + j + "点。不可！！</h1>";
+			}else if(j >= 60 && j <= 69){
+				str = "<p>" + j + "点。可。</p>";
+			}else if(j >= 70 && j <= 79){
+				str = "<h1>" + j + "点。良☆</h1>" ;
+			}else if(j >= 80){
+				str = "<h1>" + j + "点。優☆ミ</h1>";
+			}
+		
+		target = document.getElementById("kekka");
+		target.innerHTML = str;
+	}
+
+	--></script>
+
+	<div id = "kekka"></div>
+</body>
+</html>

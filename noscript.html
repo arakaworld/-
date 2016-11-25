@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<title>noscriptの使い方</title>
+
+		<script type="text/javascript" src ="func1.js"></script>
+		
+	</head>
+	<body>
+
+		<h2>これは通常のHTMLで記述①</h2>
+
+		<noscript>
+			<h1>JavaScriptを有効にして下さい</h1>
+		</noscript>
+
+		<script>
+			msg();
+			document.title = "おはよう日本";
+		</script>
+
+		<h2>これは通常のHTMLで記述②</h2>
+
+		<script>
+			msg2();
+		</script>
+
+			<form name="form1" id="id_form1" action="">
+				<input name="textBox1" id="id_textBox1" type="text" value="" />
+				<input type="button" value="Exec" onclick="onButtonClick();" />
+			</form>
+		<div id="output"></div>
+
+
+	</body>
+</html>
