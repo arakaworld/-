@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset = "UTF-8">
+	<title>jQueryのサンプル３</title>
+		<script src = "http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<script>
+			jQuery( function() {
+				$("#btnShow").click( function() {
+					var uname = $("#userName").val();
+					if(uname == "") {
+						$("h3").remove();
+						$("form").after("<h3>エラー：名前が未入力です</h3>");
+					}else {
+						$("h3").remove();
+						$("form").after("<h3>ようこそ" + uname + "さん</h3>");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>jQueryのサンプル３</h1>
+		<p>氏名を入力し、［表示］ボタンを押して下さい。</p>
+<HR>
+		<form>
+			氏名：<input type = "text" id = "userName">
+			<input type = "button" value = "表示" id = "btnShow">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<title>アニメーション効果のカスタマイズ</title>
+
+		<style>
+			#target {
+				position: absolute;
+			}
+		</style>
+
+		<script src = "http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<script>
+			jQuery(function() {
+				$("#target").mouseover(function() {
+					$("#target").animate( {
+						"left" : "500px",
+						"top" : "150px",
+						"width" : "300px",
+						"height" : "350px",
+						},
+						"slow",
+						"swing"
+					);
+				});
+
+				$("#target").click(function() {
+					$("#target").animate( {
+						"left" : "-500px",
+						"top" : "-150px",
+						"width" : "-300px",
+						"height" : "-350px",
+						},
+						"slow",
+						"swing"
+					);
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+		<h1>アニメーション効果のカスタマイズ</h1>
+		<p>画像をクリックして下さい</p>
+<HR>
+		<img src = "JS.jpg" id = "target" widht = "50" height = "30">
+	</body>
+</html>

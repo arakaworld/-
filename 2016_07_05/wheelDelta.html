@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>ホイールマウスの移動量</title>
+</head>
+	<body>
+		<div id = "result"></div>
+		<script><!--
+
+			function disp(evt) {
+				var ele = document.getElementById("result");
+				ele.innerHTML = "";
+				if(document.uniqueID) {
+					evt = event;
+				}
+				if(evt.wheelDelta) {
+					var n = evt.wheelDelta;
+					if(window.opera) {
+						n = -n;
+					}
+					ele.innerHTML = "wheelDelta = " + n;
+				}
+
+
+
+
+
