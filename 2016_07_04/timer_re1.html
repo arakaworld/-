@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<title>タイマー機能のサンプル</title>
+		<script><!--
+			var timerID;
+
+			function startClock() {
+				timerID = window.setInterval(dispClock,1000);
+			}
+
+			function stopClock() {
+				clearInterval(timerID);
+
+			}
+
+			function dispClock() {
+				var now = new Date();
+				var hh = now.getHours();
+				var mm = now.getMinutes();
+				var ss = now.getSeconds();
+				var time = hh + "時" + mm + "分" + ss + "秒";
+				document.formClock.clock.value = time;
+			}
+		--></script>
+	</head>
+	<body>
+		<h1>タイマー機能のサンプル１</h1>
+		<p>スタートボタンを押すとデジタル時計を表示</p>
+<HR>
+		<form name = 'formClock'>
+			<input type = 'button' value = 'スタート' onclick = 'startClock()'>
+			<input type = "button" value = "ストップ" onclick = "stopClock()">
+			<input type = 'text' name = 'clock'>
+		</form>
+	</body>
+</html>

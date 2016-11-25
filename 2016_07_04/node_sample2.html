@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<title>ノード取得のサンプル２</title>
+		<script><!--
+
+			function changeH2() {
+				var targets = document.getElementsByTagName("h2");
+
+				for(var i = 0; i < targets.length; i++) {
+					targets[i].innerHTML = (i + 1) + "：変更後のメッセージ";
+				}
+
+			}
+
+		--></script>
+	</head>
+	<body>
+		<h1>ノード取得のサンプル２</h1>
+		<p>ボタンを押したらH2タグのデータのみメッセージを変更する</p>
+<HR>
+		<h1>これはH1</h1>
+		<h2>これはH2</h2>
+		<h2>これはH2</h2>
+		<h2>これはH2</h2>
+		<h3>これはH3</h3>
+		<h2>これはH2</h2>
+		<h4>これはH4</h4>
+
+		<form>
+			<input type = "button" value = "H2の変更" onclick = "changeH2()">
+		</form>
+	</bpdy>
+</html>

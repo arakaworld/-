@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>タイマー機能のサンプル２</title>
+	<script><!--
+		function movePage() {
+			var id = window.setTimeout(move,3000);
+		}
+
+		function move() {
+			var url = "http://www.yahoo.co.jp";
+			location.replace(url);
+		}
+	--></script>
+</head>
+
+<body>
+	<h1>下のボタンを押すと３秒後に違うページに移動します</h1>
+<HR>
+	<form name = "formPage">
+		<input type = "button" value = "移動" onclick = "movePage()">
+	</form>
+</body>

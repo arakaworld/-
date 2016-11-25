@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>ノード取得のサンプル</title>
+	<script><!--
+		
+		function changeH1() {
+			var t = document.getElementById("moji");
+			t.innerHTML = "DOMで変更しました";
+		}
+	--></script>
+</head>
+<body>
+	<h1>ノード取得のサンプル</h1>
+	<p>ボタンを押したらメッセージを変更する</p>
+<HR>
+	<h1 id="moji">これはボタンを押す前の初期状態です</h1>
+	<h2>この部分はH2タグで記述しています</h2>
+
+	<form>
+		<input type = "button" value = "H1タグの内容変更" onclick = "changeH1()">
+	</form>
+</body>
+</html>

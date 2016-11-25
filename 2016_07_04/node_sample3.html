@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>ノード取得のサンプル３</title>
+	<script><!--
+		function showName() {
+			var inName = document.formInput.userName.value;
+			var target = document.getElementById("name");
+
+			if(inName == "") {
+				target.innerHTML = "<h1>（エラー）名前が未入力です</h1>"
+			}else {
+				target.innerHTML = "<h1>" + inName + "さん、ようこそ</h1>";
+			}
+		}
+	--></script>
+</head>
+<body>
+	<h1>ノード取得のサンプル３</h1>
+	<p>名前を入力し、［表示］ボタンを押すと、メッセージが表示される</p>
+<HR>
+	<form name = "formInput">
+		氏名：<input type = "text" name = "userName">
+		<input type = "button" value = "表示" onclick = "showName()">
+	</form>
+	<div id = "name"> </div>
+</body>
+</html>

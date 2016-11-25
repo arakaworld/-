@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<title>イベント処理のサンプル２</title>
+		<script>
+			function showName() {
+				var n = document.userInfo.userName.value;
+				window.alert(n + "さん、ようこそ");
+			}
+		</script>
+	</head>
+	<body>
+		<h1>イベント処理のサンプル２</h1>
+		<p>ボタンを押したら、入力した名前を表示する</p>
+<HR>
+		<form name="userInfo">
+			氏名：<input type = "text" name = "userName" size = "20">
+			<input type = "button" value = "表示" onclick = "showName();">
+		</form>
+	</body>
+</html>
